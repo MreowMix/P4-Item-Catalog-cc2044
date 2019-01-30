@@ -1,0 +1,35 @@
+<html>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href = "{{url_for('showAllBrands')}}">Snowboard Brands Application</a></li>
+			<li>
+					{%if 'username' not in session %}
+					<a class="button" href="{{url_for('showLogin')}}">Login </a>
+					{% else %}
+					<a class="button" href="{{url_for('gdisconnect')}}">Logout </a>
+					{% endif %}
+			</li>
+		</ul>
+	</nav>
+	<h1> Edit Snowboard </h1>
+
+	<form action="{{ url_for('editSnowboard', brand_id = snowboard.brand_id, snowboard_id=snowboard_id)}}" method = 'post'>
+
+	<dl>
+		<dt>Name:</dt>
+			<dd><input type ='text' size='30' name='name' placeholder = '{{snowboard.name }}' required></dd>
+		<dt>Style:</dt>
+			<dd><textarea name = 'style' rows='5' cols='40' placeholder = '{{snowboard.style }}' required></textarea></dd>
+	</dl>
+
+
+	<input type='submit' value='Edit'>
+
+	<a href = "{{url_for('showSnowboard', brand_id = brand_id)}}"> Cancel </a>
+	</form>
+</body>
+</html>

@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+body {
+    font: 75% georgia, sans-serif;
+    line-height: 1;
+    margin: 10px;
+    padding: 5px;
+    background-color: lightblue;
+    background-image: url('mountain.jpg');
+}
+h1 {
+    font-size: 5em;
+    font-weight: normal;
+    text-align: center;
+    margin: 0px;
+    border-bottom: 2px solid #eee;
+}
+ 
+h2 {
+    font-size: 3em;
+    font-weight: normal;
+    float: right;
+    margin: 0px;
+}
+ 
+h3 {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    margin: 0px;
+}
+
+p1 {
+    font-size: 100%;
+}
+
+p2 {
+    font-size: 80%;
+}
+
+dt {
+    color: #cccccc;
+    margin: 10px;
+}
+ 
+a {
+    text-decoration: none;
+    color: #ffffcc;
+    font-size: 1em;
+    margin: 5px;
+}
+ 
+.pane {
+    position: absolute;
+    text-align: center;
+    width: 70%;
+    left: 15%;
+    border: 2px solid;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 5px;
+    border-color: #999999;
+    background-color: gray;
+}
+ 
+.header {
+    left: 50%;
+    text-align: center;
+}
+ 
+.name {
+    display: inline-block;
+    left: 10%;
+}
+ 
+.style {
+    display: inline-block;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+  }
+
+.nav {
+    margin: 50px;
+}
+.loginpage {
+    text-align: center;
+}
+ 
+.flash {
+    background: #cee5f5;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+    /* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+#signInButton{
+    text-align: center;
+    margin: 10px;
+}

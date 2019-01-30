@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+	
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href = "{{url_for('showAllBrands')}}">Snowboard Brands Application</a></li>
+			<li>
+					{%if 'username' not in session %}
+					<a class="button" href="{{url_for('showLogin')}}">Login </a>
+					{% else %}
+					<a class="button" href="{{url_for('gdisconnect')}}">Logout </a>
+					{% endif %}
+			</li>
+		</ul>
+	</nav>
+	<h1>Snowboard Brands</h1>
+		<div class = 'pane'>
+			{% for brand in brand %}
+			<div>
+				<a href = "{{url_for('showSnowboard', brand_id = brand.id)}}"> <h3>{{brand.name}}</h3></a>
+				<br>
+			</div>
+			{% endfor %}
+		</div>
+</body>
+
+</html>

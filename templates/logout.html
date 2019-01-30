@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--LOAD PRE-REQUISITES FOR GOOGLE SIGN IN -->
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+   <script src="//apis.google.com/js/platform.js?onload=start"> </script>
+<!-- END PRE-REQUISITES FOR GOOGLE SIGN IN -->
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+  <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+</head>
+
+<body class='loginpage'>
+    <nav>
+      <ul>
+        <li><a href = "{{url_for('showAllBrands')}}" >Snowboard Brands Application</a></li>
+        <li>
+            {%if 'username' not in session %}
+            <a class="button" href="{{url_for('showLogin')}}">Login </a>
+            {% else %}
+            <a class="button" href="{{url_for('gdisconnect')}}">Logout </a>
+            {% endif %}
+        </li>
+      </ul>
+    </nav>
+  <header>
+  </header>
+<h3>Successfully Disconnected</h3>
+
+</body>
+</html>

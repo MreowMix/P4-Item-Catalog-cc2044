@@ -1,0 +1,62 @@
+<html>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+	
+<body>
+	<nav>
+		<ul>
+			<li><a href = "{{url_for('showAllBrands')}}">Snowboard Brands Application</a></li>
+			<li>
+					{%if 'username' not in session %}
+					<a class="button" href="{{url_for('showLogin')}}">Login </a>
+					{% else %}
+					<a class="button" href="{{url_for('gdisconnect')}}">Logout </a>
+					{% endif %}
+			</li>
+		</ul>
+	</nav>
+	<div class = 'flash'>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			<ul>
+			{% for message in messages %}
+			<li> <strong> {{ message }} </strong> </li>
+			{% endfor %}
+			</ul>
+			{% endif %}
+		{% endwith %}
+	</div>
+	<div class = 'pane'>
+		<div class = 'header'>
+			<h1>{{ brand.name }}</h1>
+		</div>
+		<br>
+		<a href = "{{url_for('newSnowboard', brand_id = brand.id) }}">Create New Snowboard</a>
+		<div class='grid-container'>
+			<div class='column1'>
+				<p1>Snowboard Name</p1>
+			</div>
+			<div class='column2'>
+				<p1>Snowboard Style</p1>
+			</div>
+			<div class='column3'>
+				<p1>Options</p1>
+			</div>
+			{% for snowboard in snowboard %}
+			<div class='column1'>
+				<span class = 'name'><p2>{{snowboard.name}}</p2></span>
+			</div>
+			<div class='column2'>
+				<span class = 'style'><p2>{{snowboard.style}} </p2></span>
+			</div>
+			<div class='column3'>
+				<a href= "{{url_for('editSnowboard', brand_id = brand.id, snowboard_id=snowboard.id)}}">Edit</a>
+				<a href= "{{url_for('deleteSnowboard', brand_id = brand.id, snowboard_id=snowboard.id)}}">Delete</a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</body>
+</html>

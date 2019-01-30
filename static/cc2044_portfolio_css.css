@@ -1,0 +1,82 @@
+@charset "utf-8";
+html, body {
+    font: 75% georgia, sans-serif;
+    line-height: 1;
+    margin: 10px; 
+    padding: 5px;
+}
+h1 {
+    font-size: 65px;
+    font-weight: normal;
+    margin: 0px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: normal;
+    float: right;
+    margin: 0px;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: normal;
+    margin: 5px;
+}
+
+h4.cat-title {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 5px;
+}
+
+p{
+    font-size: 15px;
+}
+
+hr {
+    border-top: 1px solid #8c8b8b;
+    padding:0px;
+    margin:0px;
+}
+
+/* GRID */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.site-header {
+    margin: 10px;
+    overflow: auto;
+    vertical-align: middle;
+}
+
+.header-text {
+    float: right;
+    height: 30%;
+    margin: 10px;
+}
+
+/* IMAGES */
+.logo {
+    height: 8%;
+    width: 8%;
+}
+.center-img {
+    width: 100%;
+    margin: 5px;
+}
+.first-img {
+    width: 100%;
+    margin: 5px;
+}
+.second-img {
+    width: 100%;
+    margin: 5px;
+}
+.third-img {
+    width: 100%;
+    margin: 5px;
+}

@@ -1,0 +1,10 @@
+/
+/brands = showbrands()
+/brand/brand_id/new = newbrand()
+/brand/brand_id/edit = editbrand()
+/brand/brand_id/delete = deletebrand()
+/brand/brand_id = showsnowboard()
+/brand/brand_id/snowboard - showsnowboard()
+/brand/brand_id/snowboard/new = newsnowboard()
+/brand/brand_id/snowboard/snowboard_id/edit = editsnowboard()
+/brand/brand_id/snowboard/snowboard_id/delete = newsnowboard()
